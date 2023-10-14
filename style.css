@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap');
+
+:root{
+    --blue:#1a73e8;
+    --black:#074B80;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+section:nth-child(even){
+    background: #eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color: var(--blue);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+
+}
+
+h3{
+    font-size: 1.8rem;
+    padding: .5rem 0;
+}
+p{
+    text-transform: none;
+}
+
+/* CV */
+
+.cv{
+    max-width: 80rem;
+    max-height: 100rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0,0,0,.2);
+    background: #fff;
+    padding: 1.5rem;
+    margin: 0 auto;
+    margin-top: 8em;
+    margin-bottom: 5rem;
+}
+
+.cv .info h1{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.cv .info span{
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.cv .contact-social{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.cv .contact-social a{
+    padding-right: 4.5rem;
+    color: #074B80;
+    text-transform: none;
+}
+
+.cv .contact-social i{
+    color: #1a73e8;
+}
+
+.cv .content-cv a{
+    display: block;
+    font-size: 1.6rem;
+    padding:.1rem 0;
+    color: #074B80;
+
+}
+
+.content-cv p{
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.cv .content-cv a:hover{
+    text-decoration: underline;
+    color: #1a73e8;
+}
+
+.cv h2{
+    display: block;
+    padding: 2rem 0;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.cv .footer-cv{
+    border-top: .1rem solid #eee;
+    line-height: 3rem;
+
+}
+
+.cv .footer-cv p{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-style: italic;
+
+}
+
+.cv .row{
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+.skills-bar{
+    width: 100%;
+    background: #fff;
+
+}
+
+.skills-bar .bar{
+    margin: 2rem;
+}
+
+.skills-bar .bar .info span{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+   
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                        0px 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.skills-bar .bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: #1a73e8;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+
+}
+
+.skills-bar .bar .progress-line.html span{
+    width: 90%;
+}
+
+.skills-bar .bar .progress-line.css span{
+    width: 80%;
+}
+
+.skills-bar .bar .progress-line.Javascripts span{
+    width: 60%;
+}
+
+.skills-bar .bar .progress-line.php span{
+    width: 70%;
+}
+
+.skills-bar .bar .progress-line.wordpress span{
+    width: 80%;
+}
+
+.skills-bar .bar .progress-line.mysql span{
+    width: 70%;
+}
+
+.skills-bar .bar .progress-line.seo span{
+    width: 90%;
+}
+
+.skills-bar .bar .progress-line.video span{
+    width: 85%;
+}
+
+.skills-bar .bar .progress-line spane{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.skills-bar .bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -24px;
+    background: #074B80;
+    color: #fff;
+    font-size: 1.2rem; 
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+   
+}
+
+@keyframes showText2{
+    100%{
+        opacity: 1;
+    }
+}
+
+.skills-bar .bar .progress-line.html span::after{
+    content: "90%";
+}
+
+.skills-bar .bar .progress-line.css span::after{
+    content: "80%";
+}
+
+.skills-bar .bar .progress-line.Javascripts span::after{
+    content: "60%";
+}
+
+.skills-bar .bar .progress-line.php span::after{
+    content: "70%";
+}
+
+.skills-bar .bar .progress-line.wordpress span::after{
+    content: "80%";
+}
+
+.skills-bar .bar .progress-line.mysql span::after{
+    content: "70%";
+}
+
+.skills-bar .bar .progress-line.seo span::after{
+    content: "90%";
+}
+
+.skills-bar .bar .progress-line.video span::after{
+    content: "85%";
+}
+
+
+
+
+
